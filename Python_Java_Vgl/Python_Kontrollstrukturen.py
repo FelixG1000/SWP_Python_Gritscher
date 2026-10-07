@@ -82,3 +82,33 @@ except ValueError:          #except ist wie catch in Java
 # Referenzzähler & garbage Collection
 # Referenzzähler: zählt wie viele Referenzen auf ein Objekt zeigen
 # garbage Collection: Wenn der Zähler 0 ist, wird das Objekt gelöscht (garbage collection)
+
+# finally: wird immer verwendet, wenn eine Resource geöffnet wurde, damit danach die Resource wieder geschlossen wird (zB Datei, Datenbankverbindung)
+# in Python gibt es kein finally, sondern try-except-finally, wobei finally immer ausgeführt wird, egal ob ein Fehler aufgetreten ist oder nicht
+
+#Array:
+#Betriebsystem kann Array "burst readen" schnell lesen
+#bei Liste muss das Betriebsystem die Liste Element für Element lesen, was langsamer ist
+
+#Vorteil Liste:
+# erweiterbar
+
+#Nachteil Array:
+# nicht erweiterbar, muss neu erstellt werden, wenn es größer werden soll
+# längenunabhängigen anzahl, kann man mittels 3 schritten etwas einfügen
+# Halbieren, und 2 zeiger ändern 
+
+
+#Array Liste: 
+# Wird element hinzugefügt, wird das Array neu erstellt und die alten Elemente kopiert
+# es gibt dann also zwei Arrays, das alte und das neue, das alte wird dann gelöscht (garbage collector)
+a = [1, 'a', 2] # eckige Klammer ist eine Array List
+type(a) # <class 'list'>, Liste, ist eine Array List
+
+#map : schlüssel-Wert-Paar, wie ein Dictionary, aber mit fester Größe, kann nicht erweitert werden
+#map defintion:  in python: Dictionary, in Java: HashMap, in C#: Dictionary 
+
+# bei Lotto: 6 mal ziehen, aber nue 2 gleiche zahlen, also 6 verschiedene zahlen, die in einer Liste gespeichert werden
+# Liste von 45 erstellen 
+# Wenn die Zahl schon einmal gezogen wurdem schaut man in der Liste der 45 zahlen nach,
+# zb man zieht Index 20 (also zahl 21), dann nimmt man diesen index und swappt das mit index 45
